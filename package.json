@@ -1,0 +1,26 @@
+{
+  "name": "iconfessionnal",
+  "version": "1.0.0",
+  "description": "Anonymous confessions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierreburton91/iConfessionnal.git"
+  },
+  "keywords": [
+    "confessions"
+  ],
+  "author": "Pierre Burton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierreburton91/iConfessionnal/issues"
+  },
+  "homepage": "https://github.com/pierreburton91/iConfessionnal#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}
