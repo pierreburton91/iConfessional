@@ -9,3 +9,8 @@ app.use(express.static('public'));
 app.get('/', function (req, res) {
 	res.render('confessional');
 });
+
+/* 3, 2, 1, Launch ! */
+app.listen(process.env.PORT || 3000, function() {
+	console.log('App is up and running!');
+});

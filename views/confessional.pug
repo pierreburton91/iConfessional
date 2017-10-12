@@ -1,0 +1,44 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title Open Confessions
+		meta(name='description' content='Share confessions anonymously on a public Twitter feed !')
+		meta(name='author' content='Pierre Burton')
+		meta(name='viewport' content='initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0, width=device-width')
+		meta(name='format-detection' content='telephone=no')
+		meta(name='theme-color' content='#662D91')
+		meta(name='msapplication-navbutton-color' content='#662D91')
+		link(rel='icon' type='image/png' href='images/favicon.png')
+		meta(name='msapplication-square150x150logo' content='images/tile.png')
+		meta(name='msapplication-wide310x150logo' content='images/tile-wide.png')
+		// Twitter card
+		meta(name='twitter:card' content='summary_large_image')
+		meta(name='twitter:site' content='@iConfessionnal')
+		meta(name='twitter:creator' content='@pierreburton91')
+		meta(name='twitter:title' content='Open Confessions')
+		meta(name='twitter:description' content='Share confessions anonymously')
+		meta(name='twitter:image' content='images/tile-wide.png')
+		// Open graphs
+		meta(property='og:title' content='Open Confessions')
+		meta(property='og:type' content='article')
+		meta(property='og:url' content='https://twitter.com/iConfessionnal')
+		meta(property='og:image' content='images/tile-wide.png')
+		meta(property='og:description' content='Share confessions anonymously on a public Twitter feed !')
+		link(rel='stylesheet' href='styles/styles.css')
+	body
+		header
+			img(src='images/logo-nobg.svg' alt='logo')
+			h1 Open Confessions
+		section
+			form(action='/api/publish' method='POST')
+				label I have to confess...
+					textarea(maxlength='140' name='confession' required)
+					span#char-left
+				submit(value="Confess")
+		footer
+			ul
+				li
+					img(src='images/logo-nobg.svg' alt='logo')
+				li
+					a(href='http://pierre-burton.be' target='_blank') Pierre Burton
