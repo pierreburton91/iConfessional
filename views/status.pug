@@ -44,22 +44,29 @@ html
 			div.container
 				div.row
 					div.col-12
-						form(action='/api/publish' method='post')
-							label What do you want to&nbsp;tell&nbsp;?
-							textarea(maxlength='140' name='confession' autofocus required)
-							input.turing(type='text' name='turing')
-							div.f-right
-								span#char-count 140
-								input(type='submit' value='Confess')
-					div.col-12
-						h2 Share what you want anonymously !
-						p Use this small app to share anything you would never tell out loud.
-						p Your confession will be shared to a #[a.link(href='https://twitter.com/iConfessionnal' target='_blank') Twitter feed].
+						h1 #{responseText}
+						case code
+							when '200'
+								p Your confession has been successfully delivered to our Twitter feed.
+								p Go #[a.link(href=''+url+'' target='_blank') check your confession].
+							when '304'
+							when '400'
+							when '401'
+							when '403'
+							when '404'
+							when '406'
+							when '410'
+							when '420'
+							when '422'
+							when '429'
+							when '500'
+							when '502'
+							when '503'
+							when '504'
+								- break
 						br
-						p 
-							strong Feel free to share your deepest thoughts, secrets, fantasies, sins or else !
 						br
-						p This service is #[strong free] and absolutely #[strong no personnal data] will be collected.
+						a.button(href='/' target='_self') Back to homescreen
 		footer
 			div.container
 				div.row
