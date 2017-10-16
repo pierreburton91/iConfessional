@@ -42,7 +42,7 @@ header a:hover .twitter {
  	padding: 16px 0;
 }
 section {
-	flex: 1;
+	flex: 1 0 auto;
 	display: flex;
 	flex-flow: column nowrap;
 	position: relative;
@@ -105,6 +105,11 @@ section input[type="submit"]:active, .button:active {
 section h2 {
 	font-size: 1.4em;
 	margin-top: 4em;
+}
+section .response-code {
+	color: #999999;
+    font-weight: 400;
+    display: inline-block;
 }
 footer {
 	position: relative;

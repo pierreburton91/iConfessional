@@ -44,25 +44,136 @@ html
 			div.container
 				div.row
 					div.col-12
-						h1 #{responseText}
 						case code
 							when '200'
+								h1 Sucess!
 								p Your confession has been successfully delivered to our Twitter feed.
-								p Go #[a.link(href=''+url+'' target='_blank') check your confession].
+								p Go #[a.link(href='https://twitter.com/iConfessionnal/status/'+tweetId+'' target='_blank') check your confession].
 							when '304'
+							when '187'
+								h1 Not Modified
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p This is embarrassing as this service only #[strong creates] new tweets.
+								p Please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '400'
+							when '44'
+							when '92'
+							when '215'
+							when '323'
+							when '324'
+							when '325'
+							when '326'
+							when '354'
+							when '385'
+							when '386'
+								h1 Bad Request
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p The request was invalid or cannot be otherwise served.
+								p Please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '401'
+							when '32'
+							when '89'
+							when '135'
+								h1 Unauthorized
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p Missing or incorrect authentication credentials. This may also returned in other undefined circumstances.
+								p Please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '403'
+							when '36'
+							when '64'
+							when '87'
+							when '99'
+							when '150'
+							when '151'
+							when '160'
+							when '161'
+							when '179'
+							when '185'
+							when '205'
+							when '220'
+							when '261'
+							when '271'
+							when '272'
+								h1 Forbidden
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p The request is understood, but it has been refused or access is not allowed.
+								p Please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '404'
+							when '34'
+							when '50'
+							when '144'
+								h1 Not Found
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p The URI requested is invalid or the resource requested, such as a user, does not exist.
+								p Please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '406'
+								h1 Not Acceptable
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p An invalid format has been specified in the request.
+								p Please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '410'
+							when '251'
+								h1 Gone
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p This resource is gone. Used to indicate that an API endpoint has been turned off.
+								p Please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '420'
+							when '88'
+								h1 Enhance Your Calm
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p Looks like the app has a lot of success !
+								p Too much Confessions were sent in a short period of time.
+								p You should try again in about 20 minutes.
+								p If the problem persists, please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '422'
+								h1 Unprocessable
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p Looks like your Confession can't be processed by the server or the the request is badly-formed.
+								P Please, make sure your Confession is text only.
+								p If the problem persists, please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '429'
+								h1 Too Many Requests
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p Looks like the app has a lot of success !
+								p Too much Confessions were sent in a short period of time.
+								p You should try again in about 20 minutes.
+								p If the problem persists, please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '500'
+							when '131'
+								h1 Internal Server Error
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p Something is broken in the Twitter server we're trying to reach.
+								p This is usually a temporary error. You should try again later.
+								p If the problem persists, please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '502'
+								h1 Bad Gateway
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p Twitter is down, or being upgraded.
+								p Please, try again later.
+								p If the problem persists, please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '503'
+							when '130'
+								h1 Service Unavailable
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p The Twitter server we're trying to reach is too busy at the moment.
+								p Please, try again later.
+								p If the problem persists, please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 							when '504'
+								h1 Timeout
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p The Twitter server we're trying to reach is experiencing some failure at the moment.
+								p Please, try again later.
+								p If the problem persists, please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
+							when '63'
+							when '68'
+							when '93'
+							when '226'
+							when '231'
+								h1 Unknown
+									span.response-code &nbsp;-&nbsp;code:&nbsp;#{code}
+								p An unknown error has occured.
+								p Please, try again later.
+								p If the problem persists, please report this issue #[a.link(href='https://github.com/pierreburton91/iConfessionnal/issues/new' target='_blank') here].
 								- break
 						br
 						br
