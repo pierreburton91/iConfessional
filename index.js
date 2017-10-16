@@ -31,9 +31,9 @@ app.post('/api/publish', function (req, res) {
 			access_token_key: process.env.admin_key,
 			access_token_secret: process.env.admin_secret
 		});
-		const statusContent = encodeURIComponent(body.confession);
+		//const statusContent = encodeURIComponent(body.confession);
 
-		iConfess.post('statuses/update.json?status='+statusContent, function(err, tweet, response) {
+		iConfess.post('statuses/update', {status: body.confession}, function(err, tweet, response) {
 			if(err) {
 				res.redirect('/?code='+err[0].code);
 			}
