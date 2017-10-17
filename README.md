@@ -1,2 +1,2 @@
-# iConfessionnal
+# iConfessional
 Anonymous confessions app
