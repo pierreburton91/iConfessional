@@ -38,7 +38,8 @@ app.post('/api/publish', function (req, res) {
 				res.redirect('/?code='+err[0].code);
 			}
 			else {
-				const id = response.id_str;
+				console.log(tweet, response);
+				const id = tweet.id_str;
 				res.redirect('/?code=200&id='+id);
 			}
 		});
