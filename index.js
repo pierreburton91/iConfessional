@@ -1,10 +1,14 @@
 const express = require('express');
+const helmet = require('helmet');
+const compression = require('compression');
 const bodyParser = require('body-parser');
 const Twitter = require('twit');
 const app = express();
 
 /* Middlewares */
 app.set('view engine', 'pug');
+app.use(helmet());
+app.use(compression());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -46,5 +50,4 @@ app.post('/api/publish', function (req, res) {
 
 /* 3, 2, 1, Launch ! */
 app.listen(process.env.PORT || 3000, function() {
-	console.log('App is up and running!');
 });
