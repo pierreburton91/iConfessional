@@ -1,6 +1,6 @@
 {
   "name": "iconfessionnal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Anonymous confessions",
   "main": "index.js",
   "scripts": {
