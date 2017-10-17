@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const Twitter = require('twitter');
+const Twitter = require('twit');
 const app = express();
 
 /* Middlewares */
@@ -26,9 +26,9 @@ app.post('/api/publish', function (req, res) {
 	}
 	else {
 		const iConfess = new Twitter({
-			// consummer_key: process.env.app_key,
-			// consummer_secret: process.env.app_secret,
-			access_token_key: process.env.admin_key,
+			consummer_key: process.env.app_key,
+			consummer_secret: process.env.app_secret,
+			access_token: process.env.admin_key,
 			access_token_secret: process.env.admin_secret
 		});
 		//const statusContent = encodeURIComponent(body.confession);
