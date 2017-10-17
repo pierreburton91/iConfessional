@@ -26,8 +26,8 @@ app.post('/api/publish', function (req, res) {
 	}
 	else {
 		const iConfess = new Twitter({
-			consummer_key: process.env.app_key,
-			consummer_secret: process.env.app_secret,
+			consumer_key: process.env.app_key,
+			consumer_secret: process.env.app_secret,
 			access_token: process.env.admin_key,
 			access_token_secret: process.env.admin_secret
 		});
