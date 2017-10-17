@@ -31,14 +31,12 @@ app.post('/api/publish', function (req, res) {
 			access_token: process.env.admin_key,
 			access_token_secret: process.env.admin_secret
 		});
-		//const statusContent = encodeURIComponent(body.confession);
 
 		iConfess.post('statuses/update', {status: body.confession}, function(err, tweet, response) {
 			if(err) {
 				res.redirect('/?code='+err[0].code);
 			}
 			else {
-				console.log(tweet, response);
 				const id = tweet.id_str;
 				res.redirect('/?code=200&id='+id);
 			}
