@@ -5,7 +5,7 @@ var textarea = document.querySelector('textarea'),
 
 if (textarea) {
 	textarea.addEventListener('input', function() {
-		var countLeft = 140 - textarea.value.length;
+		var countLeft = 280 - textarea.value.length;
 
 		counter.innerHTML = countLeft;
 
