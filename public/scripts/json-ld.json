@@ -1,0 +1,20 @@
+{
+	"@context": "http://www.schema.org",
+	"@type": "CreativeWork",
+	"name": "Open Confessions",
+	"alternateName": "iConfessional",
+	"url": "https://iconfessional.herokuapp.com/",
+	"description": "Share confessions anonymously on a public Twitter feed !",
+	"image": "https://iconfessional.herokuapp.com/images/tile-wide.png",
+	"creator": {
+		"@context": "http://schema.org/",
+		"@type": "Person",
+		"name": "Pierre Burton",
+		"jobTitle": "Web Designer, Front-end Developper",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Charleroi",
+			"addressRegion": "Belgique, Wallonie"
+		}
+	}
+}
